@@ -72,21 +72,21 @@ function gameEngine() {
 
         for (let i = 0; i < babyArr.length; i++) {
             if (babyArr[i].x === 18) {
-                babyArr[i].x =- 1;
+                babyArr[i].x = - 1;
             } else if (babyArr.length === 3) {
                 babyArr[i].x += 1;
             }
         }
     }
-    var myVar;
-    function myFunction() {
-        myVar = setInterval(every, 9000);
+    var x;
+    function ChildMove() {
+        x = setInterval( Migrate, 9000);
     }
-    function every() {
+    function Migrate() {
         move();
     }
 
-    myFunction();
+    ChildMove();
     //Moving the snake 
     for (let i = snakeArr.length - 2; i >= 0; i--) {
         snakeArr[i + 1] = { ...snakeArr[i] };
